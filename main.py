@@ -1,7 +1,6 @@
 import discord
 import os
 import requests
-import json
 import random
 from replit import db
 from keep_alive import keep_alive
@@ -27,6 +26,8 @@ def get_cat_fact():  # retorna un random fact sobre gatos
   response = requests.get(
       "https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1")
   cat_fact = response.json()["text"]
+  if len(cat_fact) <= 2:
+    get_cat_fact()
   return cat_fact
 
 
@@ -34,6 +35,8 @@ def get_dog_fact():  # retorna un random fact sobre perros
   response = requests.get(
     "https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=1")
   dog_fact = response.json()["text"]
+  if len(dog_fact) <= 2:
+    get_dog_fact()
   return dog_fact
 
 
@@ -41,6 +44,8 @@ def get_horse_fact():  # retorna un random fact sobre caballos
   response = requests.get(
     "https://cat-fact.herokuapp.com/facts/random?animal_type=horse&amount=1")
   horse_fact = response.json()["text"]
+  if len(horse_fact) <= 2:
+    get_horse_fact()
   return horse_fact
 
 

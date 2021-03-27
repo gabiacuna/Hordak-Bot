@@ -12,3 +12,7 @@ Comandos:
 * `$new <nueva frase>` -> agrega una nueva frase a las respuestas de mensajes sad.
 * `$list` -> Muestra las frases de respuesta agregadas.
 * `$del <int>` -> Elimina una de las frases de respuesta agregada (con su index en '$list')
+
+* `$responding` -> Contesta si esta activada la respuesta a mensajes sad.
+* `$responding <True o 1>` -> Activa la respuesta a mensajes sad.
+* `$responding <False o 0>` -> Desactiva la respuesta a mensajes sad.
