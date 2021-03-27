@@ -82,7 +82,7 @@ async def on_message(message):
     fact = get_horse_fact()
     await message.channel.send(fact)
 
-  if db["responding"]:
+if db["responding"]:  #Solo hace las respuestas a msges sad si estan activadas
     options = starter_buenaonda
 
     if "buenaOndas" in db.keys():
